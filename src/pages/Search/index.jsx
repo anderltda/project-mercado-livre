@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -25,22 +25,22 @@ class Search extends Component {
 
     renderProduct(item) {
         return (
-            <div key={item.id} className="demo-card-wide mdl-card mdl-shadow--2dp">
-                <div className="mdl-card__title mdl-card--expand">
-                    <h2 className="mdl-card__title-text center">
-                        <img src={item.thumbnail}></img>
-                    </h2>
+
+            <div key={item.id} className="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+                <div className="mdl-card__text">
+                    <p><img src={item.thumbnail}  style={{ marginLeft: '25%', marginTop: '25%'}}/></p>
                 </div>
                 <div className="mdl-card__supporting-text">
-                    {item.title}
+                    <p>
+                        <Link to={`/item/${item.id}`}>
+                            <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                Abrir
+                            </button>
+                        </Link>
+                    </p>
+                    <p> {item.title}</p>
                 </div>
-                <div className="mdl-card__actions mdl-card--border">
-                    <Link to={`/item/${item.id}`}>
-                        <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                            Abrir
-                    </button>
-                    </Link>
-                </div>
+
             </div>
 
 
@@ -53,12 +53,15 @@ class Search extends Component {
         console.log(results);
 
         return (
-            <div>
-                <input type="text" onChange={this.onSearch} placeholder="Buscar produtos, marcas e muito mais…"></input>
-                <ul>
+            <Fragment>
+                <div>
+                    <input type="text" onChange={this.onSearch} placeholder="Buscar produtos, marcas e muito mais…"></input>
+                </div>
+                <div className="mdl-grid">
                     {this.state.results.map(this.renderProduct)}
-                </ul>
-            </div>
+                </div>
+
+            </Fragment>
         );
     }
 }
