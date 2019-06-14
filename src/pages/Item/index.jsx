@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import './style.css';
+import Money from '../../components/Money';
 
 class Item extends Component {
 
@@ -11,6 +12,12 @@ class Item extends Component {
             id: props.match.params.id,
             data: {},
         };
+
+        var formatter = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL',
+            minimumFractionDigits: 2,
+        });
 
     }
 
@@ -45,27 +52,23 @@ class Item extends Component {
                             </div>
                             <div className="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet">
                                 <p style={{ padding: 10 }}></p>
-                                <p style={{margin: 0}}>#{this.state.data.id}</p>
-                                <p style={{margin: 0}}>{this.state.data.sold_quantity} vendidos</p>
-                                <h3 style={{color: "#000"}}>{this.state.data.title}</h3>
-                                <h3 style={{color: "#000"}}><b>R$ {this.state.data.price}</b></h3>
+                                <p style={{ margin: 0 }}>#{this.state.data.id}</p>
+                                <p style={{ margin: 0 }}>{this.state.data.sold_quantity} vendidos</p>
+                                <h3 style={{ color: "#000" }}>{this.state.data.title}</h3>
+                                <h3 style={{ color: "#000" }}><b><Money amount={this.state.data.price} /></b></h3>
                                 <button className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
                                     COMPRAR
-                            </button>
+                                </button>
                             </div>
                             <div className="mdl-cell mdl-cell--12-col">
-                                <h3 style={{color: "#000"}}><b>Descrição</b></h3>
+                                <h3 style={{ color: "#000" }}><b>Descrição</b></h3>
                             </div>
                             <div className="mdl-cell mdl-cell--12-col">
-                                <p style={{textAlign: "justify"}}>{this.state.data.description}</p>
+                                <p style={{ textAlign: "justify" }}>{this.state.data.description}</p>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
             </Fragment>
         );
 
