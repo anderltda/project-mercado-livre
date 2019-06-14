@@ -1,0 +1,76 @@
+.header {
+    background-color: #fff159;
+    padding: 10px 10px;
+}
+
+.header__logo {
+    height: 34px;
+    width: 134px;
+}
+
+input {
+    font-size: 20px;
+    border-radius: 8px 8px 8px 8px;
+    text-rendering: auto;
+}
+
+
+@media (min-width: 1146px) {
+    input {
+        position: absolute;
+        left: 325px;
+        top: 20px;
+        height: 30px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 1145px) {
+    input {
+        position: absolute;
+        left: 210px;
+        top: 20px;
+        height: 30px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 1093px) {
+    input {
+        position: absolute;
+        left: 190px;
+        top: 20px;
+        height: 30px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 800px) {
+    input {
+        position: absolute;
+        left: 180px;
+        top: 20px;
+        height: 30px;
+        width: 70%;
+    }
+}
+
+@media (max-width: 699px) {
+    input {
+        position: absolute;
+        left: 165px;
+        top: 20px;
+        height: 30px;
+        width: 50%;
+    }
+}
+
+@media (max-width: 320px) {
+    input {
+        position: absolute;
+        left: 165px;
+        top: 20px;
+        height: 30px;
+        width: 45%;
+    }
+}
