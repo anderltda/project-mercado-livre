@@ -32,7 +32,7 @@ class Search extends Component {
                 </div>
                 <div className="mdl-card__supporting-text">
                     <p>
-                        <Link to={`/item/${item.id}`}>
+                        <Link to={`item/${item.id}`}>
                             <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                                 Abrir
                             </button>
