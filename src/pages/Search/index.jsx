@@ -27,20 +27,21 @@ class Search extends Component {
         return (
 
             <div key={item.id} className="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
-                <div className="mdl-card__text">
-                    <p><img src={item.thumbnail}  style={{ marginLeft: '25%', marginTop: '25%'}}/></p>
-                </div>
-                <div className="mdl-card__supporting-text">
-                    <p>
-                        <Link to={`item/${item.id}`}>
-                            <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-                                Abrir
-                            </button>
-                        </Link>
-                    </p>
+                <div className="img-thumb">
+                    <div className="mdl-card__text">
+                        <p><img src={item.thumbnail} /></p>
+                    </div>
+                    <div className="mdl-card__supporting-text">
                     <p> {item.title}</p>
+                        <p>
+                            <Link to={`item/${item.id}`}>
+                                <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+                                    Abrir
+                            </button>
+                            </Link>
+                        </p>
+                    </div>
                 </div>
-
             </div>
 
 
