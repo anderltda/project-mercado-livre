@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/project-mercado-livre/static/css/main.9e2e92db.chunk.css",
+    "main.js": "/project-mercado-livre/static/js/main.1bbfcc31.chunk.js",
+    "main.js.map": "/project-mercado-livre/static/js/main.1bbfcc31.chunk.js.map",
+    "runtime~main.js": "/project-mercado-livre/static/js/runtime~main.7c734680.js",
+    "runtime~main.js.map": "/project-mercado-livre/static/js/runtime~main.7c734680.js.map",
+    "static/js/2.a573434a.chunk.js": "/project-mercado-livre/static/js/2.a573434a.chunk.js",
+    "static/js/2.a573434a.chunk.js.map": "/project-mercado-livre/static/js/2.a573434a.chunk.js.map",
+    "index.html": "/project-mercado-livre/index.html",
+    "precache-manifest.fce1d652e69a7cf821326aa822f4f338.js": "/project-mercado-livre/precache-manifest.fce1d652e69a7cf821326aa822f4f338.js",
+    "service-worker.js": "/project-mercado-livre/service-worker.js",
+    "static/css/main.9e2e92db.chunk.css.map": "/project-mercado-livre/static/css/main.9e2e92db.chunk.css.map",
+    "static/media/logo.svg": "/project-mercado-livre/static/media/logo.5d5d9eef.svg"
+  }
+}
